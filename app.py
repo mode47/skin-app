@@ -37,7 +37,7 @@ def loss_max(y_true, y_pred):
     return K.max(K.abs(y_pred - y_true), axis=-1)
 
 
-model = load_model(r'6claass (3).h5', custom_objects={'loss_max': loss_max})
+model = load_model('6claass (3).h5', custom_objects={'loss_max': loss_max})
 
 
 @app.route('/')
