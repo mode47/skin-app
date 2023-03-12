@@ -32,12 +32,9 @@ classes = ['Acne',
 # model=load_model(r"C:\Users\hp\Downloads\intel-Classfier-main\intel-Classfier-main\Intel_Image_Classification.h5")
 
 
-def loss_max(y_true, y_pred):
-    from keras import backend as K
-    return K.max(K.abs(y_pred - y_true), axis=-1)
 
 
-model = load_model('6claass (3).h5', custom_objects={'loss_max': loss_max})
+model = load_model('6claass (3).h5')
 
 
 @app.route('/')
