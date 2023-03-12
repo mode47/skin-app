@@ -34,9 +34,8 @@ classes = ['Acne',
 
 
 
-model = load_model('6claass (3).h5')
-
-
+model = load_model('6claass (3).h5',compile=False)
+model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
 @app.route('/')
 def index():
     return render_template('index.html', appName="Intel Image Classification")
