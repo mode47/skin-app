@@ -6,7 +6,6 @@ from PIL import Image
 import numpy as np
 app = Flask(__name__)
 
-
 def predict_image_class(image):
     image = Image.open(image)
     image = image.resize((180, 180))
@@ -30,7 +29,7 @@ classes = ['Acne',
            'Melanoma Skin Cancer',
            'Eczema Photos']
 # model=load_model(r"C:\Users\hp\Downloads\intel-Classfier-main\intel-Classfier-main\Intel_Image_Classification.h5")
-model = load_model(r'D:\New folder (5)\6claass (3).h5')
+model = load_model(r'6claass (3).h5')
 
 
 @app.route('/')
